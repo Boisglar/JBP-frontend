@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const Phone = ({amount, discription, image, manufacturer, model,
     resolution, diagonal, density, frequency, ram, rom, name,
     frequencyCPU, cores, camera, battery, wight, price}) => {
