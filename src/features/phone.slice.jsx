@@ -6,7 +6,8 @@ const initialState = {
     loading: false
 }
 
-export const addPhone = createAsyncThunk('phone/post', async ({ manufacturer, model, resolution, diagonal, density, frequency, ram, rom, name, frequencyCPU, cores, camera, battery, wight, price }, thunkAPI) => {
+export const addPhone = createAsyncThunk('phone/post', async ({amount, discription, manufacturer, model,resolution,
+    diagonal, density, frequency, ram, rom, name, frequencyCPU, cores, camera, battery, wight, price }, thunkAPI) => {
     try {
         const res = await fetch('http://localhost:4000/phones', {
             method: 'POST',
@@ -32,7 +33,9 @@ export const addPhone = createAsyncThunk('phone/post', async ({ manufacturer, mo
                     },
                     camera: camera,
                     battery: battery,
-                    wight: wight
+                    wight: wight,
+                    discription: discription,
+                    amount: amount,
                 }
                 }),
             headers: {
@@ -49,7 +52,7 @@ export const addPhone = createAsyncThunk('phone/post', async ({ manufacturer, mo
     }
 })
 
-export const getPhone = createAsyncThunk('phone/get', async ( thunkAPI) => {
+export const getPhone = createAsyncThunk('phone/get', async ( data, thunkAPI) => {
     try {
         const res = await fetch('http://localhost:4000/phones')
         const phones = await res.json()
@@ -97,3 +100,4 @@ const phoneSlice = createSlice({
 )
 
 export default phoneSlice.reducer
+
