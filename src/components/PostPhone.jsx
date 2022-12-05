@@ -19,13 +19,17 @@ const PostPhone = () => {
     const [battery ,setbattery] = useState('')
     const [wight ,setwight] = useState('')
     const [price ,setprice] = useState('')
+    const [discription, setdiscription] = useState('')
+    const [amount, setamount] = useState('')
 
     const dispatch = useDispatch()
     const loading = useSelector((state) => state.loading)
     const error = useSelector((state) => state.error)
 
     const handlePostPhone = () => {
-        dispatch(addPhone(manufacturer, model, resolution, diagonal, density, frequency, ram, rom, name, frequencyCPU, cores, camera, battery, wight, price))
+        dispatch(addPhone(manufacturer, model, resolution, diagonal,
+            density, frequency, ram, rom, name, frequencyCPU, cores,
+            camera, battery, wight, price, amount, discription))
     }
 
     if (loading) {
@@ -66,6 +70,8 @@ const PostPhone = () => {
                 <li>Камера: <input type="text" value={camera} onChange={(e)=> setcamera(e.target.value)}/></li>
                 <li>Аккумулятор: <input type="text" value={battery} onChange={(e)=> setbattery(e.target.value)}/></li>
                 <li>Вес: <input type="text" value={wight} onChange={(e)=> setwight(e.target.value)}/></li>
+                <li>Количество: <input type="text" value={amount} onChange={(e) => setamount(e.target.value)}/></li>
+                <li>Описание товара: <textarea cols="30" rows="10" value={discription} onChange={(e) => setdiscription(e.target.value)}>Описание товара</textarea></li>
             </ul>   
             <button onClick={() => handlePostPhone()}>ADD PHONE</button>        
         </div>

@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Phone = ({manufacturer, model, resolution, diagonal, density, frequency, ram, rom, name, frequencyCPU, cores, camera, battery, wight, price}) => {
+
+const Phone = ({amount, discription, image, manufacturer, model,
+    resolution, diagonal, density, frequency, ram, rom, name,
+    frequencyCPU, cores, camera, battery, wight, price}) => {
     return (
         <div className='phone'>
+            {image.map((item) => <img src={`http://localhost:4000${item}`} alt={name}/>)}
             <ul>
                 <li>Производитель: <p>{manufacturer}</p></li>
                 <li>Модель: <p>{model}</p></li>
@@ -30,34 +34,13 @@ const Phone = ({manufacturer, model, resolution, diagonal, density, frequency, r
                 <li>Камера: {camera}</li>
                 <li>Аккумулятор: {battery}</li>
                 <li>Вес: {wight}</li>
+                <li>Остаток на складе: {amount}</li>
             </ul>
             <div>{price}</div>
+            <div>{discription}</div>
         </div>
     );
 };
 
 export default Phone;
 
-// manufacturer: String,
-//     model: String,
-//     price: String,
-//     specification: {
-//         display: {
-//             resolution: String,
-//             diagonal: String,
-//             density: String,
-//             frequency: String,
-//         },
-//         memory: {
-//             ram: String,
-//             rom: String,
-//         },
-//         processor: {
-//             name: String,
-//             frequency: String,
-//             cores: String
-//         },
-//         camera: String,
-//         battery: String,
-//         wight: String
-//     }

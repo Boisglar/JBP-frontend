@@ -42,6 +42,10 @@ const Phones = () => {
                     battery={item.specification.battery}
                     wight={item.specification.wight}
                     price={item.price}
+                    image={item.image}
+                    discription={item.discription}
+                    amount={item.amount}
+                    key='phone'
                     />
                 )
             })}
