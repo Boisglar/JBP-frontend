@@ -27,9 +27,9 @@ const PostPhone = () => {
     const error = useSelector((state) => state.error)
 
     const handlePostPhone = () => {
-        dispatch(addPhone(manufacturer, model, resolution, diagonal,
+        dispatch(addPhone({manufacturer, model, resolution, diagonal,
             density, frequency, ram, rom, name, frequencyCPU, cores,
-            camera, battery, wight, price, amount, discription))
+            camera, battery, wight, price, amount, discription}))
     }
 
     if (loading) {
