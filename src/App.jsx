@@ -1,11 +1,13 @@
 // import Phones from "./components/Phones";
-import PostPhone from "./components/PostPhone";
+import CompairePhone from "./components/CompairePhone";
+// import PostPhone from "./components/PostPhone";
 
 function App() {
   return (
     <div className="App">
       {/* <Phones/> */}
-      <PostPhone/>
+      {/* <PostPhone/> */}
+      <CompairePhone/>
     </div>
   );
 }
