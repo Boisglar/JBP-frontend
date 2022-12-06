@@ -5,7 +5,7 @@ import { getPhone } from '../features/phone.slice';
 import Phone from './Phone';
 
 const Phones = () => {
-    const phones = useSelector((state) => state.phones)
+    const phones = useSelector((state) => state.phone.phones)
     const loading = useSelector((state) => state.loading)
     const error = useSelector((state) => state.error)
     const dispatch = useDispatch()

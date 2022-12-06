@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 
-const compareState = {
+const initialState = {
     products: [],
     error: null,
     loading: false
@@ -8,7 +8,7 @@ const compareState = {
 
 export const addCompare = createAsyncThunk(
     'compare/post',
-    async ({productId, amount}, thunkAPI) => {
+    async ({ productId, amount }, thunkAPI) => {
         try {
             const res = await fetch('http://localhost:4000/compare', {
                 method: 'POST',
@@ -26,7 +26,7 @@ export const addCompare = createAsyncThunk(
             }
             return thunkAPI.fulfillWithValue(compare)
         } catch (error) {
-            return thunkAPI.rejectWithValue(error.message) 
+            return thunkAPI.rejectWithValue(error.message)
 
         }
     }
@@ -66,7 +66,7 @@ export const deleteCompare = createAsyncThunk(
 
 const compareSlice = createSlice({
     name: 'compare',
-    compareState,
+    initialState,
     reducers: {},
     extraReducers: (builder) => {
         builder
@@ -74,7 +74,7 @@ const compareSlice = createSlice({
                 state.loading = true
                 state.error = null
             })
-            .addCase(getCompare.rejected, (state, action) =>{
+            .addCase(getCompare.rejected, (state, action) => {
                 state.error = action.payload
                 state.loading = false
             })

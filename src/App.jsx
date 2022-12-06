@@ -1,31 +1,15 @@
-
-
-
-// import Category from "./components/categories/Category";
+import { useState } from 'react';
+import style from './App.scss'
 import Header from "./components/header/Header";
-// import PhoneCards from "./components/phoneCards/PhoneCards";
-// import PostPhone from "./components/PostPhone";
-// import PostPhone from "./components/PostPhone";
- import styles from "./App.scss"
-import About from "./components/about/About";
-
-
-
+import CompareButton from './components/Phone/Compare/CompareButton';
+import PhoneCards from "./components/Phone/phoneCards/PhoneCards";
 
 function App() {
   return (
-    <div className={styles.App}>
-       <Header/>
-       <About/>
-       {/* <Category/> */}
-      {/* <PhoneCards/> */}
-      {/* <PostPhone/> */}
-      {/* <PostPhone/> */}
-
-    <div className="App">
-     <Header/>
-     <Category/>
-
+    <div className={style.App}>
+      <Header/>
+      <PhoneCards/>
+      <CompareButton/>
     </div>
   );
 }

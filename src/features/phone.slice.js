@@ -104,5 +104,5 @@ const phoneSlice = createSlice({
 }
 )
 
-export default phoneSlice.reducer
+export default phoneSlice.reducer;
 
