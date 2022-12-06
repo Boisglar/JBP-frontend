@@ -1,14 +1,13 @@
 
 
-
-// import Category from "./components/categories/Category";
 import Header from "./components/header/Header";
-// import PhoneCards from "./components/phoneCards/PhoneCards";
+import Category from "./components/categories/Category";
+import Footer from "./components/footer/Footer";
 // import PostPhone from "./components/PostPhone";
 // import PostPhone from "./components/PostPhone";
+
  import styles from "./App.scss"
 import About from "./components/about/About";
-
 
 
 
@@ -26,6 +25,7 @@ function App() {
      <Header/>
      <Category/>
 
+     <Footer/>
     </div>
   );
 }

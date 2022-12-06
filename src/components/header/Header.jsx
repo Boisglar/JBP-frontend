@@ -9,9 +9,9 @@ export default function Header() {
     
 
 
-       <header>
+       <header className={styles.header_start}>
     <h3>GROZNY</h3>
-    <ul>
+    <ul className={styles.ul_div}>
         <li className={styles.main}>ALL PRODUCTS</li>
         <li className={styles.main}>SOLUTIONS</li>
         <li className={styles.main}>ABOUT</li>
