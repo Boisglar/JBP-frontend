@@ -1,4 +1,5 @@
-// import Phones from "./components/Phones";
+
+
 
 // import Category from "./components/categories/Category";
 import Header from "./components/header/Header";
@@ -7,6 +8,7 @@ import Header from "./components/header/Header";
 // import PostPhone from "./components/PostPhone";
  import styles from "./App.scss"
 import About from "./components/about/About";
+
 
 
 
@@ -19,6 +21,10 @@ function App() {
       {/* <PhoneCards/> */}
       {/* <PostPhone/> */}
       {/* <PostPhone/> */}
+
+    <div className="App">
+     <Header/>
+     <Category/>
 
     </div>
   );
