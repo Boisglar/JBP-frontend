@@ -1,0 +1,55 @@
+.Cards{
+    display: flex;
+    justify-content: space-around;
+    max-width: 900px;
+    flex-wrap: wrap;
+    img {
+        max-width: 200px;
+        height: 150px;
+    }
+    .image{
+        text-align: center;
+    }
+    .description{
+        padding: 5px 0;
+        overflow-y: scroll;
+        height: 100px;
+        padding: 5px 10px;
+    
+    }
+}
+
+
+.Card{
+    max-width: 330px;
+    padding-top: 50px;
+
+}
+
+.name{
+    margin: 0;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around
+}
+.price{
+    padding: 10px 0;
+}
+
+.buttonBasket {
+box-sizing: border-box;
+border: 1px solid #000000;
+border-radius: 15px;
+padding: 10px 30px;
+background-color: transparent;
+cursor: pointer;
+}
+.buttonCompare{
+ box-sizing: border-box;
+border: 1px solid #000000;
+border-radius: 15px;
+padding: 10px 30px;
+background-color: transparent;
+cursor: pointer;
+}
