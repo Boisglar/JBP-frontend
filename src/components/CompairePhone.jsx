@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getPhone } from '../features/phone.slice';
+import { getCompare } from '../features/compare.slice';
 
 const CompairePhone = () => {
-    const phones = useSelector((state) => state.phones)
+    const products = useSelector((state) => state.compare.products)
     const dispatch = useDispatch()
     useEffect(() => {
-        dispatch(getPhone())
+        dispatch(getCompare())
     }, [dispatch])
     return (
         <div>
@@ -32,7 +32,7 @@ const CompairePhone = () => {
                     <tr>Аккумулятор</tr>
                     <tr>Вес</tr>
                 </td>
-                {phones.map((item) => {
+                {products.map((item) => {
                     return (
                         <td>
                             <tr><img src={`http://localhost:4000${item.image[0]}`} alt={item.model} /></tr>
