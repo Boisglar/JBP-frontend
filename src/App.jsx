@@ -1,9 +1,10 @@
 // import Phones from "./components/Phones";
 
-import Category from "./components/categories/Category";
 import Header from "./components/header/Header";
+import Category from "./components/categories/Category";
+import Footer from "./components/footer/Footer";
 // import PostPhone from "./components/PostPhone";
-import PostPhone from "./components/PostPhone";
+// import PostPhone from "./components/PostPhone";
 
 
 function App() {
@@ -13,8 +14,9 @@ function App() {
      <Header/>
      <Category/>
       {/* <PostPhone/> */}
-      <PostPhone/>
+      {/* <PostPhone/> */}
 
+     <Footer/>
     </div>
   );
 }
