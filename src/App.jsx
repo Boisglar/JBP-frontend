@@ -16,17 +16,8 @@ function App() {
   return (
     <div className={styles.App}>
        <Header/>
-       <About/>
-       {/* <Category/> */}
-      {/* <PhoneCards/> */}
-      {/* <PostPhone/> */}
-      {/* <PostPhone/> */}
-
-    <div className="App">
-     <Header/>
-     <Category/>
-
-     <Footer/>
+       {/* <About/> */}
+       <Footer/>
     </div>
   );
 }
