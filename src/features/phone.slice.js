@@ -63,6 +63,7 @@ export const getPhone = createAsyncThunk('phone/get', async (data, thunkAPI) => 
         if (phones.error) {
             return thunkAPI.rejectWithValue(phones.error)
         }
+
         return thunkAPI.fulfillWithValue(phones)
     } catch (error) {
         return thunkAPI.rejectWithValue(error.message)
