@@ -1,0 +1,143 @@
+.paragraph {
+    text-align: center;
+    font-size: smaller;
+    font-size: smaller;
+ 
+    
+
+}
+
+
+ul {
+    display: flex;
+    justify-content: center;
+}
+.main_text {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.upper_ul {
+    background: #FFFFFF;
+border-radius: 32px;
+margin-left: 168px;
+
+}
+
+.laptop_div {
+
+  width: 400px;
+   
+  box-shadow: 0px 0px 15px 5px #cecece;
+  transition: 0.2s;
+  cursor: pointer;
+
+background: #FFFFFF;
+
+ 
+}
+
+.laptop_div:hover  {
+   transform: scale(1.05); 
+}
+
+.true_laptop {
+    display: flex;
+    justify-content: right;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.watch_div {
+    
+    box-shadow: 0px 0px 15px 5px #cecece;
+    transition: 0.2s;
+    margin-top: 30px;
+    cursor: pointer;
+
+}
+.watch_div:hover {
+    transform: scale(1.05); 
+}
+
+.watch_text {
+    display: flex;
+   margin-right: 21px;
+  justify-content: right;
+  font-size: 20px;
+    
+   
+}
+
+
+.under_div {
+   display: flex;
+ margin-right: 70px;
+ justify-items: right;
+ margin-left: 39px;
+ 
+   
+
+}
+
+.wphones_div {
+    margin-right: 33px;
+    box-shadow: 0px 0px 15px 5px #cecece;
+    transition: 0.2s;
+    cursor: pointer;
+    
+}
+
+.wphones_div:hover {
+    transform: scale(1.05); 
+}
+
+.tablet_div {
+    box-shadow: 0px 0px 15px 5px #cecece;
+    transition: 0.2s;
+ 
+    cursor: pointer;
+}
+.tablet_div:hover {
+    transform: scale(1.05); 
+}
+
+.wphones_text{
+    font-size: 20px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+
+.tablet_text {
+    font-size: 20px;
+    list-style-type: none;  
+     display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+
+.photo {
+    width: 250px;
+ 
+    
+
+}
+  
+ 
+ 
+.photo4 {
+    width: 250px;
+    margin-left: 10px;
+
+}
+
+
+ 
