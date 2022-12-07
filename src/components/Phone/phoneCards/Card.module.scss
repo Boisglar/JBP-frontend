@@ -1,26 +1,108 @@
 .Cards {
+    margin-top: 50px;
     display: flex;
     justify-content: space-around;
-    width: 80%;
+    width: 100%;
     flex-wrap: wrap;
-    border: 1px solid gray;
     padding: 15px;
     position: relative;
     background-color: #fff;
+    box-shadow: 0 0 20px grey;
 
     img {
         max-width: 200px;
         height: 150px;
     }
+}
 
-    .image {
-        text-align: center;
+.Cards_active {
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    height: 240px;
+    display: flex;
+    padding-top: 30px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #fff;
+    box-shadow: 0 0 10px grey;
+
+    .photo {
+        max-width: 100px;
+        max-height: 70px;
+    }
+
+    .Card {
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 0 5px grey;
+        height: 200px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .name {
+        font-size: 16px;
+    }
+
+    .model {
+        font-size: 14px;
+    }
+
+    .memory {
+        display: flex;
+        font-size: 14px;
+    }
+
+    .battery {
+        font-size: 12px;
+    }
+
+    .price {
+        padding: 0;
+        font-weight: 700;
+        color: red;
+    }
+
+    .buttonBasket {
+        width: 50px;
+        padding: 0;
+        height: 25px;
+        font-size: 10px;
+        font-weight: 500;
+        margin: 5px;
+        border: 1px solid rgb(251, 163, 20);
+    }
+
+    .buttonBasket:hover {
+        background-color: rgb(251, 163, 20);
+    }
+    
+    .buttonCompare {
+        width: 70px;
+        padding: 0;
+        font-size: 10px;
+        font-weight: 500;
+        height: 25px;
+        margin: 5px 5px 0 0;
+        border: 1px solid rgb(28, 162, 251);
+    }
+
+    .buttonCompare:hover {
+        background-color: rgb(28, 162, 251);
     }
 }
 
 
 .Card {
-    max-width: 330px;
+    width: 250px;
+    height: 300px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .name {
@@ -33,11 +115,11 @@
 }
 
 .price {
-    padding: 10px 0;
+    font-size: 24px;
+    text-align: center;
 }
 
 .buttonBasket {
-    box-sizing: border-box;
     border: 1px solid #000000;
     border-radius: 15px;
     padding: 10px 30px;
@@ -46,10 +128,17 @@
 }
 
 .buttonCompare {
-    box-sizing: border-box;
     border: 1px solid #000000;
     border-radius: 15px;
     padding: 10px 30px;
     background-color: transparent;
     cursor: pointer;
+}
+
+.phoneDescription {
+    width: 100%;
+}
+
+h3 {
+    text-align: left;
 }

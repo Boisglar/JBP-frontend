@@ -9,12 +9,11 @@ const CompareButton = () => {
 
     const handleActive = () => {
         dispatch(compareState(!active))
-        console.log(active);
     }
 
     return (
-        <div className={style.btn}>
-            <button onClick={handleActive}>СРАВНИТЬ</button>
+        <div>
+            <button className={active ? style.btn_active : style.btn} onClick={handleActive}>{active ? 'ЗАКРЫТЬ' : "СРАВНИТЬ"}</button>
         </div>
     );
 };

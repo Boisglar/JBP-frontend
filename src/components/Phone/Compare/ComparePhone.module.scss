@@ -1,9 +1,55 @@
 .compare_div {
     position: absolute;
-    width: 700px;
-    height: 600px;
+    width: 100%;
+    height: 400px;
+    top: 280px;
     background-color: #fff;
     box-shadow: 0 0 10px grey;
-    border-radius: 10px;
-    padding: 20px;
+    padding-top: 20px;
+    display: flex;
+    transition: 0.1s;
+}
+
+.table_h {
+    margin-top: 63px;
+}
+
+.table_i {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.table_h div {
+    padding-left: 10px;
+    margin-left: 20px;
+    font-size: 14px;
+    width: 140px;
+    border-bottom: 1px solid rgb(135, 135, 135);
+    border-right: 1px solid rgb(135, 135, 135);
+    height: 15px;
+}
+
+.table_i div {
+    width: 150px;
+    text-align: center;
+    font-size: 14px;
+    height: 15px;
+    border-bottom: 1px solid rgb(135, 135, 135);
+    border-right: 1px solid rgb(135, 135, 135);
+}
+
+.photo .image {
+    height: 50px;
+    max-width: 50px;
+    margin-bottom: 10px;
+}
+
+.display, .memory, .processor, .other {
+    background-color: rgb(207, 207, 207);
+    font-weight: 600;
+}
+
+.del_button {
+    margin-top: 10px;
 }
