@@ -22,7 +22,6 @@ const ComparePhone = () => {
                 array.push(phones[index])
             }
         }
-
     }
     
     const handleDel = (id) => {

@@ -1,14 +1,24 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { addToCart } from '../../../features/cart.slice'
 import { addCompare } from '../../../features/compare.slice'
 import styles from "../phoneCards/Card.module.scss"
 
 function PhoneCard({ item }) {
   const dispatch = useDispatch()
+  const products = useSelector((state) => state.cart.productId)
+  const valid = products.find((element) => element.productId === item._id)
 
   const handleCompare = (id) => {
-    dispatch(addCompare(id))
+      dispatch(addCompare(id))
   }
+
+  const handleCart = (id) => {
+    if (!valid) {
+      dispatch(addToCart(id))
+    }
+  }
+
   return (
       <div className={styles.Card} key={item._id}>
         <div className={styles.image}>
@@ -29,7 +39,7 @@ function PhoneCard({ item }) {
           <div className={styles.price}>{item.price} руб</div>
         </div>
         <div className={styles.buttons}>
-          <button className={styles.buttonBasket}>КУПИТЬ</button>
+          <button className={styles.buttonBasket} onClick={() => handleCart(item._id)}>КУПИТЬ</button>
           <button className={styles.buttonCompare} onClick={() => handleCompare(item._id)}>СРАВНИТЬ</button>
         </div>
       </div>
