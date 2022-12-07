@@ -14,9 +14,9 @@ const PhoneCards = () => {
     }, [dispatch])
     const phones = useSelector((state) => state.phones.phones)
     return (
-        <div className={style.Cards}>
+        <div className={active ? style.Cards_active : style.Cards}>
             {phones.map((element) => <PhoneCard item={element} />)}
-            <CompareButton/>
+            {!active && <CompareButton/>}
             {active && <ComparePhone/>}
         </div>
     );

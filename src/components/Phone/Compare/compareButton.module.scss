@@ -1,5 +1,19 @@
 .btn {
     position: absolute;
-    right: -100px;
-    top: 10px;
+    right: 0px;
+    top: 0px;
+    border: none;
+    background-color: rgb(58, 28, 229);
+    color: white;
+    cursor: pointer;
+}
+
+.btn_active {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border: none;
+    background-color: rgb(229, 28, 41);
+    color: white;
+    cursor: pointer;
 }

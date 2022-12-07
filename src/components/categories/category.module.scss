@@ -3,7 +3,6 @@
 .paragraph {
     text-align: center;
     font-size: smaller;
-    font-size: smaller;
 }
 
 .div_ul {
@@ -20,7 +19,6 @@
 .upper_ul {
     background: #FFFFFF;
     border-radius: 32px;
-    margin-left: 168px;
 }
 
 .laptop_div {
@@ -38,14 +36,15 @@
 .true_laptop {
     display: flex;
     justify-content: right;
-    margin-right: 20px;
+    margin-right: 10px;
     font-size: 20px;
 }
 
 .watch_div {
     box-shadow: 0px 0px 15px 5px #cecece;
+    padding: 0;
     transition: 0.2s;
-    margin-top: 30px;
+    margin-top: 20px;
     cursor: pointer;
 }
 
@@ -55,7 +54,7 @@
 
 .watch_text {
     display: flex;
-    margin-right: 21px;
+    margin-right: 10px;
     justify-content: right;
     font-size: 20px;
 }
@@ -63,13 +62,12 @@
 
 .under_div {
     display: flex;
-    margin-right: 70px;
     justify-items: right;
-    margin-left: 39px;
+    margin-left: 20px;
 }
 
 .wphones_div {
-    margin-right: 33px;
+    margin-right: 20px;
     box-shadow: 0px 0px 15px 5px #cecece;
     transition: 0.2s;
     cursor: pointer;
@@ -112,5 +110,4 @@
 
 .photo4 {
     width: 250px;
-    margin-left: 10px;
 }
