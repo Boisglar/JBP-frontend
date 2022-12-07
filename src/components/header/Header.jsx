@@ -4,22 +4,12 @@ import img2 from './photo/basket.jpg'
 import styles from './header.module.scss'
 
 
-<<<<<<< HEAD
- const Header = () => {
+
+const Header = () => {
   return (
-    <header>
+    <header className={styles.header_start}>
       <h3>GROZNY</h3>
-      <ul>
-=======
-export default function Header() {
-  return ( 
-    
-
-
-       <header className={styles.header_start}>
-    <h3>GROZNY</h3>
-    <ul className={styles.ul_div}>
->>>>>>> main
+      <ul className={styles.ul_div}>
         <li className={styles.main}>ALL PRODUCTS</li>
         <li className={styles.main}>SOLUTIONS</li>
         <li className={styles.main}>ABOUT</li>
