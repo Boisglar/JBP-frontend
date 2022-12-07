@@ -3,12 +3,13 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 const initialState = {
     products: [],
     error: null,
-    loading: false
+    loading: false,
+    active: false,
 }
 
 export const addCompare = createAsyncThunk(
     'compare/post',
-    async ({ productId, amount }, thunkAPI) => {
+    async (product, thunkAPI) => {
         try {
             const res = await fetch('http://localhost:4000/compare', {
                 method: 'POST',
@@ -16,8 +17,7 @@ export const addCompare = createAsyncThunk(
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    productId,
-                    amount
+                    product
                 })
             })
             const compare = await res.json()
@@ -52,7 +52,9 @@ export const deleteCompare = createAsyncThunk(
     'compare/delete',
     async (id, thunkAPI) => {
         try {
-            const res = await fetch(`http://localhost:4000/compare/${id}`)
+            const res = await fetch(`http://localhost:4000/compare/${id}`, {
+                method: 'DELETE'
+            })
             const compare = await res.json()
             if (compare.error) {
                 return thunkAPI.rejectWithValue(compare.error)
@@ -67,7 +69,11 @@ export const deleteCompare = createAsyncThunk(
 const compareSlice = createSlice({
     name: 'compare',
     initialState,
-    reducers: {},
+    reducers: {
+        compareState(state, action) {
+            state.active = !state.active
+        },
+    },
     extraReducers: (builder) => {
         builder
             .addCase(getCompare.pending, (state, action) => {
@@ -104,15 +110,13 @@ const compareSlice = createSlice({
             })
             .addCase(deleteCompare.fulfilled, (state, action) => {
                 state.loading = false
-                state.productId = state.products.filter((item) => {
-                    if (item._id === action.payload) {
-                        return false
-                    }
-                    return item
-                })
+                state.products = state.products.filter((item) => item.product !== action.payload.product)
             })
     }
 })
+
+
+export const { compareState } = compareSlice.actions;
 
 export default compareSlice.reducer
 

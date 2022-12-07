@@ -1,55 +1,55 @@
-.Cards{
+.Cards {
     display: flex;
     justify-content: space-around;
-    max-width: 900px;
+    width: 80%;
     flex-wrap: wrap;
+    border: 1px solid gray;
+    padding: 15px;
+    position: relative;
+    background-color: #fff;
+
     img {
         max-width: 200px;
         height: 150px;
     }
-    .image{
+
+    .image {
         text-align: center;
     }
-    .description{
-        padding: 5px 0;
-        overflow-y: scroll;
-        height: 100px;
-        padding: 5px 10px;
-    
-    }
 }
 
 
-.Card{
+.Card {
     max-width: 330px;
-    padding-top: 50px;
-
 }
 
-.name{
+.name {
     margin: 0;
 }
-.buttons{
+
+.buttons {
     display: flex;
     justify-content: space-around
 }
-.price{
+
+.price {
     padding: 10px 0;
 }
 
 .buttonBasket {
-box-sizing: border-box;
-border: 1px solid #000000;
-border-radius: 15px;
-padding: 10px 30px;
-background-color: transparent;
-cursor: pointer;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    padding: 10px 30px;
+    background-color: transparent;
+    cursor: pointer;
 }
-.buttonCompare{
- box-sizing: border-box;
-border: 1px solid #000000;
-border-radius: 15px;
-padding: 10px 30px;
-background-color: transparent;
-cursor: pointer;
+
+.buttonCompare {
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    padding: 10px 30px;
+    background-color: transparent;
+    cursor: pointer;
 }
