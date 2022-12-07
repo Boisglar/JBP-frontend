@@ -1,7 +1,7 @@
 import React from 'react'
 import img from './photo/search.png'
 import img2 from './photo/basket.jpg'
-import styles from './header.module.css'
+import styles from './header.module.scss'
 
 
  const Header = () => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import laptop from './photo-category/laptop.png'
-import styles from '../categories/category.module.css'
+import styles from '../categories/category.module.scss'
 import watch from './photo-category/watch.png'
 import wphones from './photo-category/wphones.png'
 import tablet from './photo-category/tablet.png'
