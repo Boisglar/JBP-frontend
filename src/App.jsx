@@ -13,14 +13,13 @@ import BlankPage from './components/blankPage/BlankPage';
 
 // import Category from "./components/categories/Category";
 import Cart from "./components/Cart/Cart";
-import ComparePhone from "./components/Phone/Compare/ComparePhone";
 
 function App() {
   return (
     <div className={styles.App}>
        <Header/>
        <Routes>
-        <Route path="/comparison" element = {< PhoneCards/>} />
+        <Route path="/comparison" element = {< ComparePhone/>} /> 
         <Route path='/products' element = {<Category/>}/>
         <Route path='/about' element = {<About/>} />
         <Route path='/noPage' element = {<BlankPage/>} />
