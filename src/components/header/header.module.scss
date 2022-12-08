@@ -1,0 +1,39 @@
+header {
+    display: flex;
+    width: 100%;
+    justify-content:space-around
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    font-size: 13px;
+}
+
+.main {
+    cursor: pointer;
+    margin-left: 55px;
+}
+
+.header_end {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.search {
+    height: 17px;
+    width: 20px;
+    left: 3px;
+    top: 3px;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.basket {
+    height: 17px;
+    width: 20px;
+    cursor: pointer;
+    margin-left: 19px;
+}
