@@ -1,16 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from '../../../features/cart.slice'
-import { addCompare } from '../../../features/compare.slice'
+import { addCompare, getCompare } from '../../../features/compare.slice'
 import styles from "../phoneCards/Card.module.scss"
 
 function PhoneCard({ item }) {
   const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getCompare())
+  }, [dispatch])
+
+  const compare = useSelector((state) => state.compare.products)
   const products = useSelector((state) => state.cart.productId)
-  const valid = products.find((element) => element.productId === item._id)
+  const valid= products.filter((element) => element.productId === item._id)
+  const quantity = compare.find((element) => element.productId === item._id)
 
   const handleCompare = (id) => {
+    if (!quantity) {
       dispatch(addCompare(id))
+    }
   }
 
   const handleCart = (id) => {
@@ -36,7 +45,7 @@ function PhoneCard({ item }) {
               {item.specification.battery}
             </div>
           </div>
-          <div className={styles.price}>{item.price} руб</div>
+          <div className={styles.price}>{item.price} ₽</div>
         </div>
         <div className={styles.buttons}>
           <button className={styles.buttonBasket} onClick={() => handleCart(item._id)}>КУПИТЬ</button>
