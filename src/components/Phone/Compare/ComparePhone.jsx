@@ -14,11 +14,11 @@ const ComparePhone = () => {
         dispatch(getCompare())
     }, [dispatch])
 
-    let array = []
+    const array = []
 
     for (let index = 0; index < phones.length; index++) {
         for (let i = 0; i < products.length; i++) {
-            if (phones[index]._id === products[i].product) {
+            if (phones[index]._id === products[i].productId) {
                 array.push(phones[index])
             }
         }

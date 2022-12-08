@@ -1,19 +1,51 @@
 .btn {
     position: absolute;
-    right: 0px;
-    top: 0px;
+    right: 10px;
+    top: 10px;
+    width: 100px;
+    height: 40px;
     border: none;
-    background-color: rgb(58, 28, 229);
-    color: white;
+    background-color: rgb(28, 162, 251);
+    color: rgb(255, 255, 255);
     cursor: pointer;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    border: 1px solid rgb(28, 162, 251);
+    background-color: #fff;
+    color: rgb(28, 162, 251);
 }
 
 .btn_active {
+    font-size: 16px;
     position: absolute;
-    right: 0px;
-    top: 0px;
+    right: 5px;
+    top: 5px;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
     border: none;
     background-color: rgb(229, 28, 41);
     color: white;
     cursor: pointer;
+}
+
+.btn_active:hover {
+    background-color: #fff;
+    color: red;
+    border: 1px solid red;
+}
+
+.count {
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    background-color: rgb(247, 67, 67);
+    width: 30px;
+    height: 20px;
+    text-align: center;
+    border-radius: 20px;
+    color: #fff;
 }
